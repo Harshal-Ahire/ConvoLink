@@ -1,0 +1,129 @@
+{
+  "income_tax_slabs": {
+    "default": {
+      "0": "₹0 - ₹4,00,000: Nil",
+      "1": "₹4,00,001 - ₹8,00,000: 5%",
+      "2": "₹8,00,001 - ₹12,00,000: 10%",
+      "3": "₹12,00,001 - ₹16,00,000: 15%",
+      "4": "₹16,00,001 - ₹20,00,000: 20%",
+      "5": "₹20,00,001 - ₹24,00,000: 25%",
+      "6": "Above ₹24,00,000: 30%"
+    },
+    "new_regime": {
+      "0": "₹0 - ₹4,00,000: Nil",
+      "1": "₹4,00,001 - ₹8,00,000: 5%",
+      "2": "₹8,00,001 - ₹12,00,000: 10%",
+      "3": "₹12,00,001 - ₹16,00,000: 15%",
+      "4": "₹16,00,001 - ₹20,00,000: 20%",
+      "5": "₹20,00,001 - ₹24,00,000: 25%",
+      "6": "Above ₹24,00,000: 30%"
+    }
+  },
+  "tax_saving_strategies": {
+    "80C": {
+      "description": "Deductions up to ₹1.5 lakh per annum.",
+      "eligible_instruments": [
+        "Employee Provident Fund (EPF)",
+        "Public Provident Fund (PPF)",
+        "National Savings Certificate (NSC)",
+        "5-Year Fixed Deposit with Banks",
+        "Tax-Saving Fixed Deposit with Post Office",
+        "Senior Citizens Savings Scheme (SCSS)",
+        "Life Insurance Premiums",
+        "National Pension Scheme (NPS) Tier II (with 3-year lock-in)"
+      ]
+    },
+    "80D": {
+      "description": "Deductions for premiums paid on health insurance.",
+      "limits": {
+        "self_spouse_children": "Up to ₹25,000",
+        "parents": "Up to ₹25,000 (₹50,000 if parents are senior citizens)"
+      },
+      "additional": "Preventive health check-up expenses up to ₹5,000 are included within the above limits."
+    },
+    "80CCD": {
+      "description": "Deductions for contributions to the National Pension Scheme (NPS).",
+      "details": [
+        {
+          "section": "80CCD(1)",
+          "limit": "Up to 10% of salary (Basic + DA) or 20% of gross income, within the overall limit of ₹1.5 lakh under Section 80CCE."
+        },
+        {
+          "section": "80CCD(1B)",
+          "limit": "Additional deduction of up to ₹50,000 over and above the ₹1.5 lakh limit."
+        }
+      ]
+    },
+    "ELSS": {
+      "description": "Equity-Linked Savings Schemes offering tax deductions under Section 80C.",
+      "features": [
+        "Lock-in period of 3 years.",
+        "Potential for high returns due to equity exposure.",
+        "Tax deductions up to ₹1.5 lakh under Section 80C."
+      ],
+      "top_funds": [
+        "SBI ELSS Tax Saver Fund",
+        "Franklin India ELSS Tax Saver Fund",
+        "Quantum ELSS Tax Saver Fund",
+        "Bandhan ELSS Tax Saver Fund",
+        "HSBC ELSS Tax Saver Fund"
+      ]
+    },
+    "government_bonds": {
+      "tax_free_bonds": {
+        "description": "Bonds issued by government-backed entities offering tax-free interest income.",
+        "features": [
+          "Interest income is exempt from tax.",
+          "Long-term investment horizon (10–20 years).",
+          "Suitable for conservative investors seeking steady returns."
+        ],
+        "examples": [
+          "National Highways Authority of India Bonds",
+          "Rural Electrification Corporation Bonds"
+        ]
+      },
+      "rbi_floating_rate_bonds": {
+        "description": "Bonds issued by the Reserve Bank of India with floating interest rates.",
+        "features": [
+          "Interest rate linked to the National Savings Certificate (NSC) rate plus a spread.",
+          "Half-yearly interest payouts.",
+          "Suitable for investors seeking inflation-protected returns."
+        ],
+        "current_rate": "8.05% per annum (as of August 2025)"
+      }
+    }
+  },
+  "gst_rates": {
+    "effective_date": "22 September 2025",
+    "slabs": {
+      "5%": [
+        "Essential goods",
+        "Healthcare services",
+        "Agricultural inputs"
+      ],
+      "18%": [
+        "Standard goods and services",
+        "Consumer electronics",
+        "Automobiles"
+      ],
+      "40%": [
+        "Luxury goods",
+        "Sin goods (e.g., tobacco, alcohol)"
+      ]
+    },
+    "recent_changes": [
+      {
+        "item": "Handmade carpets and floor coverings",
+        "previous_rate": "12%",
+        "new_rate": "5%",
+        "impact": "Reduced GST to promote traditional craftsmanship and exports."
+      },
+      {
+        "item": "Man-made fibres and yarn",
+        "previous_rate": "18% and 12%",
+        "new_rate": "5%",
+        "impact": "Simplified tax structure and improved competitiveness in the textile industry."
+      }
+    ]
+  }
+}
