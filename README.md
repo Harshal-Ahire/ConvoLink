@@ -1,85 +1,44 @@
-Here's a **clean, concise, and recruiter-focused** README with only the main and important stuff:
+# ConvoLink — Multilingual AI Tax & Banking Advisory Chatbot
 
-```markdown
-# ConvoLink - Multilingual AI Tax Advisory Chatbot
+ConvoLink is an intelligent, production-ready multilingual chatbot that delivers accurate, structured, and compliant tax & GST advisory using **Large Language Models** and **RAG-inspired knowledge retrieval**. It focuses on advanced prompt engineering to generate safe, actionable, and well-formatted responses for real-world financial queries.
 
-**RAG-Inspired | LLM-Powered | Prompt Engineering**
+## Engineering & Architectural Decisions
 
-![Demo](https://via.placeholder.com/800x400?text=ConvoLink+Demo)  
-**Live Demo**: [Add deployed link here]
+### Why LLM + RAG-style Architecture?
+Traditional rule-based chatbots fail to handle complex, context-heavy financial queries. I designed ConvoLink using **Google Gemini LLM** combined with **Retrieval-Augmented Generation (RAG) principles**:
 
----
+* **Grounded Responses**: Instead of relying solely on the LLM’s parametric knowledge, the system injects a curated Tax & GST knowledge base into the prompt. This significantly reduces hallucinations and ensures compliance with Indian tax laws.
+* **Advanced Prompt Engineering**: Crafted detailed system prompts with strict instructions for response structure, language detection, legal safety, and formatting — turning raw LLM output into professional, user-friendly advisory.
+* **Multilingual Capability**: Built-in language detection and response generation allows seamless support for English, Hindi, and other languages.
 
-## Overview
+## Core Engineering Features
 
-ConvoLink is an intelligent multilingual chatbot that provides accurate tax and GST advisory using **Google Gemini LLM** and a curated knowledge base. It implements **Retrieval-Augmented Generation (RAG)** principles and advanced **Prompt Engineering** to deliver structured, compliant, and actionable responses.
+### 1. Structured Prompt Engineering Pipeline
+- Designed a comprehensive prompt template that enforces consistent output format with sections like Scenario Summary, Legal Recommendations, GST Implications, and Step-by-Step Action Plan.
+- Implemented safety constraints to ensure only legal tax-saving strategies are suggested.
+- Used dynamic context injection from the knowledge base based on user queries.
 
-Built as a capstone project to demonstrate production-ready AI application development.
+### 2. Knowledge Base Integration
+- Built a clean retrieval system that loads and injects relevant portions of the Tax & GST knowledge base (updated as of Sep 2025) into every conversation.
 
----
+### 3. Production-Ready REST API Backend
+- Developed a robust Flask-based backend with proper error handling, input validation, and CORS support.
+- Designed a clean REST endpoint (`/api/chat`) ready for integration and scaling.
 
-## Key Features
+## Technical Stack
 
-- Multilingual support with automatic language detection
-- Advanced Prompt Engineering for structured & safe responses
-- RAG-style knowledge retrieval from Tax & GST KB
-- Clean, well-formatted responses with clear sections
-- REST API backend built with Flask
+* **Language**: Python
+* **Backend**: Flask (REST API)
+* **LLM**: Google Gemini 1.5 Flash
+* **Techniques**: Advanced Prompt Engineering, RAG-style Retrieval, Multilingual NLP
+* **Others**: dotenv, Flask-CORS
+* **Frontend**: React + Vite
 
----
+## Impact & Key Achievements
 
-## Tech Stack
+- Successfully handles complex tax scenarios (freelancers, salaried, GST queries, etc.)
+- Delivers consistently structured, professional, and actionable responses
+- Demonstrates practical application of LLM APIs in the **banking and financial domain**
 
-- **Python** | **Flask** (REST API)
-- **Google Gemini 1.5 Flash**
-- **Prompt Engineering** & Knowledge Base Context Injection
-- **React** (Frontend)
-- dotenv, Flask-CORS
-
----
-
-## Architecture Highlights
-
-- User Query → Knowledge Retrieval → Smart Prompt → Gemini LLM → Structured Response
-- Focused on reducing hallucinations and ensuring compliance
-
----
-
-## API Endpoint
-
-**POST** `/api/chat`
-
-```json
-{
-  "user_message": "I am a freelancer earning 12 lakh, how can I save taxes?",
-  "language": "auto"
-}
-```
-
----
-
-## Setup
-
-```bash
-git clone https://github.com/Harshal-Ahire/ConvoLink.git
-cd ConvoLink
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-python app.py
-```
-
----
-
-## Relevance
-
-This project showcases strong skills in:
-- LLM APIs & **Prompt Engineering**
-- **RAG** principles
-- Python backend development
-- Building domain-specific AI prototypes (Banking/Finance)
-
-**Made by Harshal Ahire, Milhan Khan, Shridhar Mahale**   
-Final Year AI & ML Engineer
-```
-
+## Disclaimer
+This project is built for **educational and demonstration purposes only**. The advice provided should not be considered as official financial or tax consultation. Users are advised to consult certified professionals.
