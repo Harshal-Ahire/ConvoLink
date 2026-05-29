@@ -13,9 +13,9 @@ if not GEMINI_API_KEY:
 
 # Configure Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash")  # Free-tier Gemini model
+model = genai.GenerativeModel("gemini-1.5-flash")
 
-# Load KB from kb/kb_tax.json
+# Load KB from kb/kb.txt
 KB_PATH = os.path.join(os.path.dirname(__file__), "kb", "kb.txt")
 with open(KB_PATH, "r", encoding="utf-8") as f:
     TAX_KB = f.read()
@@ -59,20 +59,24 @@ User scenario (language hint: {language}):
 Instructions for response formatting:
 1. Detect the language if 'auto' is provided.
 2. Respond in the same language as the user.
-3. Structure your response clearly as follows using points and subpoints:
-   ✅ Scenario Summary
-       ➤ ...
-   ✅ Legal Tax-Saving Recommendations
-       ➤ ...
-   ✅ GST Implications (if applicable)
-       ➤ ...
-   ✅ Step-by-Step Action Plan
-       ➤ ...
+3. Structure your response clearly using the following headings and bullet points:
+
+### Scenario Summary
+* [Insert summary points here]
+
+### Legal Tax-Saving Recommendations
+* [Insert recommendation points here]
+
+### GST Implications (if applicable)
+* [Insert GST points here]
+
+### Step-by-Step Action Plan
+* [Insert action steps here]
+
 4. Always suggest legal tax-saving strategies only.
 5. Use simple, human-readable language and examples.
 6. If the KB does not cover the scenario, respond: "Sorry, I do not have sufficient information for this scenario."
-7. Use symbols like ✅ for main points and ➤ for subpoints.
-8. Make the response actionable and easy to read, similar to ChatGPT structured answers.
+7. Make the response actionable and easy to read.
 """
 
     try:
